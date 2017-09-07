@@ -81,8 +81,8 @@ export class DateRangeAccessor extends FilterBasedAccessor {
 				"interval":this.getInterval(),
 				"min_doc_count":0,
 				"extended_bounds":{
-					"min": "" + this.options.min,
-					"max": "" + this.options.max
+					"min": "" + this.options.min + "||/y",
+					"max": "" + this.options.max + "||/y"
 				}
 			})
 
@@ -93,6 +93,3 @@ export class DateRangeAccessor extends FilterBasedAccessor {
 			))
 	}
 }
-
-
-
